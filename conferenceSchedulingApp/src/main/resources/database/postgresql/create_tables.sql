@@ -1,3 +1,21 @@
+DROP TABLE IF EXISTS attendees;
+DROP TABLE IF EXISTS ticket_types;
+DROP TABLE IF EXISTS pricing_categories;
+DROP TABLE IF EXISTS ticket_prices;
+DROP TABLE IF EXISTS discount_codes;
+DROP TABLE IF EXISTS attendee_tickets;
+DROP TABLE IF EXISTS time_slots;
+DROP TABLE IF EXISTS sessions;
+DROP TABLE IF EXISTS session_schedule;
+DROP TABLE IF EXISTS tags;
+DROP TABLE IF EXISTS session_tags;
+DROP TABLE IF EXISTS speakers;
+DROP TABLE IF EXISTS session_speakers;
+DROP TABLE IF EXISTS workshops;
+DROP TABLE IF EXISTS workshop_speakers;
+DROP TABLE IF EXISTS workshop_registrations;
+
+
 CREATE TABLE attendees
 (
     attendee_id  SERIAL PRIMARY KEY,
