@@ -1,3 +1,21 @@
+TRUNCATE TABLE attendees;
+TRUNCATE TABLE ticket_types;
+TRUNCATE TABLE pricing_categories;
+TRUNCATE TABLE ticket_prices;
+TRUNCATE TABLE discount_codes;
+TRUNCATE TABLE attendee_tickets;
+TRUNCATE TABLE time_slots;
+TRUNCATE TABLE sessions;
+TRUNCATE TABLE session_schedule;
+TRUNCATE TABLE tags;
+TRUNCATE TABLE session_tags;
+TRUNCATE TABLE speakers;
+TRUNCATE TABLE session_speakers;
+TRUNCATE TABLE workshops;
+TRUNCATE TABLE workshop_speakers;
+TRUNCATE TABLE workshop_registrations;
+
+
 ﻿INSERT INTO ticket_types (ticket_type_code,ticket_type_name,description,includes_workshop)
 VALUES ('P','Premium','Access to all conference events plus attend the workshop of your choice.',TRUE),
        ('S','Standard','Access to all conference keynotes,sessions,community open spaces and the exhibition hall',FALSE),
