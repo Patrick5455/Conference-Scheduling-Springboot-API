@@ -1,19 +1,19 @@
-DROP TABLE IF EXISTS attendees;
-DROP TABLE IF EXISTS ticket_types;
-DROP TABLE IF EXISTS pricing_categories;
-DROP TABLE IF EXISTS ticket_prices;
-DROP TABLE IF EXISTS discount_codes;
-DROP TABLE IF EXISTS attendee_tickets;
-DROP TABLE IF EXISTS time_slots;
-DROP TABLE IF EXISTS sessions;
-DROP TABLE IF EXISTS session_schedule;
-DROP TABLE IF EXISTS tags;
-DROP TABLE IF EXISTS session_tags;
-DROP TABLE IF EXISTS speakers;
-DROP TABLE IF EXISTS session_speakers;
-DROP TABLE IF EXISTS workshops;
-DROP TABLE IF EXISTS workshop_speakers;
-DROP TABLE IF EXISTS workshop_registrations;
+DROP TABLE IF EXISTS attendees CASCADE;
+DROP TABLE IF EXISTS ticket_types CASCADE;
+DROP TABLE IF EXISTS pricing_categories CASCADE;
+DROP TABLE IF EXISTS ticket_prices CASCADE;
+DROP TABLE IF EXISTS discount_codes CASCADE;
+DROP TABLE IF EXISTS attendee_tickets CASCADE;
+DROP TABLE IF EXISTS time_slots CASCADE;
+DROP TABLE IF EXISTS sessions CASCADE;
+DROP TABLE IF EXISTS session_schedule CASCADE;
+DROP TABLE IF EXISTS tags CASCADE;
+DROP TABLE IF EXISTS session_tags CASCADE;
+DROP TABLE IF EXISTS speakers CASCADE;
+DROP TABLE IF EXISTS session_speakers CASCADE;
+DROP TABLE IF EXISTS workshops CASCADE;
+DROP TABLE IF EXISTS workshop_speakers CASCADE;
+DROP TABLE IF EXISTS workshop_registrations CASCADE;
 
 
 CREATE TABLE attendees

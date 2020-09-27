@@ -1,11 +1,14 @@
 package com.conferenceschedulingapp.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "speakers")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"}) // dealt with 500 error
 public class Speaker {
 
     // constructors
@@ -16,7 +19,7 @@ public class Speaker {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long speaker_id;
+    private Integer speaker_id;
 
     private String first_name;
     private String last_name;
@@ -24,7 +27,7 @@ public class Speaker {
     private String company;
     private String speaker_bio;
 
-    @Lob //Large Binary Object
+    @Lob //Large Object
     @Type(type = "org.hibernate.type.BinaryType") //helps hibernate deal with binary data
     private byte[] speaker_photo;
 
@@ -38,6 +41,7 @@ public class Speaker {
     }
 
     @ManyToMany(mappedBy = "speakers")
+    @JsonIgnore
     private List<Session> sessions;
 
     public List<Session> getSessions() {
@@ -48,11 +52,11 @@ public class Speaker {
         this.sessions = sessions;
     }
 
-    public Long getSpeaker_id() {
+    public Integer getSpeaker_id() {
         return speaker_id;
     }
 
-    public void setSpeaker_id(Long speaker_id) {
+    public void setSpeaker_id(Integer speaker_id) {
         this.speaker_id = speaker_id;
     }
 

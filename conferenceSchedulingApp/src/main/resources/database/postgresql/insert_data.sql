@@ -1,22 +1,21 @@
-TRUNCATE TABLE attendees;
-TRUNCATE TABLE ticket_types;
-TRUNCATE TABLE pricing_categories;
-TRUNCATE TABLE ticket_prices;
-TRUNCATE TABLE discount_codes;
-TRUNCATE TABLE attendee_tickets;
-TRUNCATE TABLE time_slots;
-TRUNCATE TABLE sessions;
-TRUNCATE TABLE session_schedule;
-TRUNCATE TABLE tags;
-TRUNCATE TABLE session_tags;
-TRUNCATE TABLE speakers;
-TRUNCATE TABLE session_speakers;
-TRUNCATE TABLE workshops;
-TRUNCATE TABLE workshop_speakers;
-TRUNCATE TABLE workshop_registrations;
+﻿TRUNCATE TABLE attendees CASCADE;
+TRUNCATE TABLE ticket_types CASCADE;
+TRUNCATE TABLE pricing_categories CASCADE;
+TRUNCATE TABLE ticket_prices CASCADE;
+TRUNCATE TABLE discount_codes CASCADE;
+TRUNCATE TABLE attendee_tickets CASCADE;
+TRUNCATE TABLE time_slots CASCADE;
+TRUNCATE TABLE sessions CASCADE;
+TRUNCATE TABLE session_schedule CASCADE;
+TRUNCATE TABLE tags CASCADE;
+TRUNCATE TABLE session_tags CASCADE;
+TRUNCATE TABLE speakers CASCADE;
+TRUNCATE TABLE session_speakers CASCADE;
+TRUNCATE TABLE workshops CASCADE;
+TRUNCATE TABLE workshop_speakers CASCADE;
+TRUNCATE TABLE workshop_registrations CASCADE;
 
-
-﻿INSERT INTO ticket_types (ticket_type_code,ticket_type_name,description,includes_workshop)
+INSERT INTO ticket_types (ticket_type_code,ticket_type_name,description,includes_workshop)
 VALUES ('P','Premium','Access to all conference events plus attend the workshop of your choice.',TRUE),
        ('S','Standard','Access to all conference keynotes,sessions,community open spaces and the exhibition hall',FALSE),
        ('C','Community','Access to keynotes,community open spaces and the exhibition hall',FALSE);

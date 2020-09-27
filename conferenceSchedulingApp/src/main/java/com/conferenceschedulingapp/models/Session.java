@@ -1,10 +1,13 @@
 package com.conferenceschedulingapp.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "sessions")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Session {
 
     // constructors
@@ -13,7 +16,7 @@ public class Session {
     //fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long session_id;
+    private Integer session_id;
     private String session_name;
     private String session_description;
     private Integer session_length;
@@ -30,11 +33,11 @@ public class Session {
 
     //pojos
 
-    public Long getSession_id() {
+    public Integer getSession_id() {
         return session_id;
     }
 
-    public void setSession_id(Long session_id) {
+    public void setSession_id(Integer session_id) {
         this.session_id = session_id;
     }
 
